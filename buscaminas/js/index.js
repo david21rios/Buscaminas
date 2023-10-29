@@ -13,16 +13,16 @@ let tablero = [
 ]; // Aquí almacenarás el estado de cada celda en el tablero
 let filas = 11; // Ajusta el número de filas según el tamaño del tablero
 let columnas = 13; // Ajusta el número de columnas según el tamaño del tablero
-const celdas = document.querySelectorAll('td');
+// const celdas = document.querySelectorAll('td');
 function actualizarContadores() {
     document.getElementById('puntos').innerText = puntos;
     document.getElementById('minas-totales').innerText = minasTotales;
 }
 let celda;
 function verificarCelda(fila, columna) {
-    celda = celdas[fila * columnas + columna];
+    celda =[fila * columnas + columna];
     if (tablero[fila][columna] === 1) {
-        celdas.textContent = "💣";
+        celda.textContent = "💣";
         console.log("la celda ha sido rellenada");
         setTimeout(function() {
             alert('GAME OVER');
@@ -30,7 +30,7 @@ function verificarCelda(fila, columna) {
         console.log('GAME OVER'); // Mostrar "Game Over"
     } else {
         puntos += 5; // Incrementar puntuación por cada celda no minada
-        verificarCelda.textContent = "✔️";
+        celda.textContent = "✔️";
         console.log("la celda ha sido rellenada");
          // Disminuir el contador de minas restantes
         actualizarContadores(); // Actualizar los contadores en el HTML

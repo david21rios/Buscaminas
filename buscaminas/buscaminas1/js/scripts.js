@@ -1,8 +1,16 @@
 // Inicializacion del tablero con minas
 let tablero = [
-    [0, 1, 0, 0, 0],
-    [0, 0, 1, 0, 0],
-    [0, 0, 0, 1, 0]
+    [0, 0, 0, 1, 0, 1, 0, 1, 0, 1, 0],
+    [1, 0, 1, 0, 0, 0, 0, 0, 1, 0, 1],
+    [0, 0, 0, 1, 0, 1, 0, 1, 0, 1, 0],
+    [0, 1, 0, 0, 0, 0, 0, 1, 0, 1, 0],
+    [0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0],
+    [0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 1],
+    [0, 1, 0, 0, 0, 0, 1, 0, 0, 1, 0],
+    [1, 0, 0, 0, 0, 0, 0, 1, 1, 0, 1],
+    [0, 0, 0, 1, 0, 1, 0, 0, 1, 0, 1]
+    // [0, 0, 0, 1, 0, 1, 0, 0, 1, 0, 1],
+    // [0, 0, 0, 1, 0, 1, 0, 0, 1, 0, 1]
 ];
 
 let intervalID;
@@ -16,17 +24,16 @@ celdas.forEach((celda, index) => {
         const celdaId = celda.id;
         const fila = celdaId[0];
         const col = celdaId[2]; 
-        if (tablero[fila][col]==1) {
-            celda.textContent = "💣";
+        if (tablero[fila][col]===1){
+            celda.textContent ="💣";
+            console.log("se puso la bomba");
             clearInterval(intervalID);
-            reiniciarJuego();
-            // Muestra un alert después de un breve retraso
             setTimeout(function() {
+                reiniciarJuego();
                 alert('GAME OVER');
-
-            }, 0.5);
-
-        } else{
+                
+            }, 0,5);
+        }else{
             celda.textContent = "😊";
             manejarClicCeldaLibre(fila,col);
         }
@@ -41,9 +48,17 @@ function reiniciarJuego(){
     puntos= 0;
     puntosElement.innerText = puntos;
     tablero = [
-        [0,1,0,0,0],
-        [0,0,1,0,0],
-        [0,0,0,1,0]
+    [0, 1, 0, 0, 0, 1, 0, 1, 0, 1, 0],
+    [0, 0, 1, 0, 0, 0, 1, 0, 1, 0, 1],
+    [0, 0, 0, 1, 0, 1, 0, 1, 0, 1, 0],
+    [0, 1, 0, 0, 0, 1, 0, 1, 0, 1, 0],
+    [0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0],
+    [0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 1],
+    [0, 1, 0, 0, 0, 0, 0, 0, 0, 1, 1],
+    [0, 0, 1, 0, 0, 0, 0, 1, 1, 0, 1],
+    [0, 0, 0, 1, 0, 1, 0, 0, 1, 0, 1]
+    // [0, 0, 0, 1, 0, 1, 0, 0, 1, 0, 1],
+    // [0, 0, 0, 1, 0, 1, 0, 0, 1, 0, 1]
     ];
     limpiarTablero();
 }
