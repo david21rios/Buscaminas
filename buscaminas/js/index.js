@@ -19,11 +19,13 @@ function actualizarContadores() {
     document.getElementById('minas-totales').innerText = minasTotales;
 }
 let celda;
+let intervalID ;
 function verificarCelda(fila, columna) {
     celda =[fila * columnas + columna];
     if (tablero[fila][columna] === 1) {
         celda.textContent = "💣";
         console.log("la celda ha sido rellenada");
+        clearInterval(intervalID);
         setTimeout(function() {
             alert('GAME OVER');
         }, 500);
