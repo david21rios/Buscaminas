@@ -8,9 +8,9 @@ let tablero = [
 let intervalID;
 // Obtén todas las celdas de la tabla
 const celdas = document.querySelectorAll('td');
-
+console.log(celdas)
 // Agrega un controlador de eventos de clic a cada celda
-celdas.forEach((celda, index) => {
+celdas.forEach((celda) => {
     celda.addEventListener('click', () => {
         // alert(`Clic en la celda ${index + 1}: ${celda.textContent}`);
         const celdaId = celda.id;
@@ -19,13 +19,13 @@ celdas.forEach((celda, index) => {
         if (tablero[fila][col]==1) {
             celda.textContent = "💣";
             clearInterval(intervalID);
-            reiniciarJuego();
+            
             // Muestra un alert después de un breve retraso
             setTimeout(function() {
                 alert('GAME OVER');
-
-            }, 0.5);
-
+                reiniciarJuego();
+            }, 1);
+            
         } else{
             celda.textContent = "😊";
             manejarClicCeldaLibre(fila,col);
