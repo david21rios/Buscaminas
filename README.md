@@ -4,15 +4,9 @@
 Este proyecto implementa el clásico juego de Buscaminas en formato web, utilizando HTML, CSS y JavaScript. El juego consiste en descubrir todas las celdas del tablero que no contienen minas evitando hacer clic en las que sí las tienen.
 
 ## Capturas de pantalla
-
-1. Juego vacío:
-   ![Juego vacío](imagen1.png)
-
-2. Juego iniciado sin minas:
-   ![Juego iniciado](imagen2.png)
-
-3. Activación de una bomba:
-   ![Activación de bomba](imagen3.png)
+1. Imagen del juego vacío: ![Imagen 1](img/imagen1.png)
+2. Imagen del juego iniciado sin minas: ![Imagen 2](img/imagen2.png)
+3. Imagen en el momento en que se activa una bomba: ![Imagen 3](img/imagen3.png)
 
 ## Instalación y Uso
 1. Clona este repositorio: `git clone https://github.com/david21rios/Buscaminas.git`
