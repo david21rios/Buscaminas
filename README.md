@@ -21,8 +21,8 @@ Este proyecto implementa el clásico juego de Buscaminas en formato web, utiliza
 No se requieren prerrequisitos adicionales más allá de un navegador web estándar.
 
 ## Autor
-- GitHub: [david21rios](https://github.com/david21rios)
-- LinkedIn: [David Rios](https://www.linkedin.com/in/davidriosl/)
+- GitHub: `[david21rios]`(https://github.com/david21rios)
+- LinkedIn: `[David Rios]`(https://www.linkedin.com/in/davidriosl/)
 
 ## Contribución
 ¡Gracias por considerar contribuir a este proyecto! Si deseas contribuir, sigue estos pasos:
@@ -33,4 +33,4 @@ No se requieren prerrequisitos adicionales más allá de un navegador web están
 5. Crea un pull request en GitHub.
 
 ## Demostración
-Puedes jugar al Buscaminas directamente desde tu navegador [aquí](https://david21rios.github.io/Buscaminas/).
+Puedes jugar al Buscaminas directamente desde tu navegador `[aquí]`(https://david21rios.github.io/Buscaminas/).
